@@ -1,0 +1,387 @@
+/*css reset*/
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {line-height: 1; background-color: #000; font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 100; overflow: hidden;}
+html,body {overflow-x: hidden;}
+.section_wrap {transition: all 1s;}
+ul, ol, li {list-style: none;}
+a {text-decoration: none; color:inherit;}
+img, video { vertical-align: top;}
+table {border-collapse: collapse;}
+input, textarea, select {outline: 0;}
+button {border: none;}
+/*header*/
+#header {display: flex; justify-content: space-between; align-items: center; background-color:transparent;
+         position:fixed; width: 100%; z-index: 1; top:0;}
+#header .logo {margin-left:100px; width:150px;}
+#header .logo img {width: 100%;}
+#header .gnb {width:50%; display: flex; justify-content: space-between; margin-right:100px;}
+#header .gnb > li {line-height: 100px; text-align: center; position: relative; width: 100%;}
+#header .gnb > li > a {display: block; font-size: 18px; font-weight:400; color:#fff; transition: all 0.5s;}
+#header .gnb li .depth2 {position: absolute; top:100px; left:50%; transform: translateX(-50%);
+                         padding:0; width: 100%; z-index: 3;
+                         height: 0; overflow: hidden; transition: all 0.5s;}
+#header .gnb li .depth2 li {width: 100%;}
+#header .gnb li .depth2 li a {display: block; line-height: 40px; color:#000; transition: all 0.5s;}
+#header .gnb > li:hover > a {color:#03a10e;;}
+#header .gnb li .depth2 li:hover a {color:#03a10e;;}
+.gnb_bg {position: absolute; width: 100%; background-color:#fff; top:100px; left:0;
+        height:0; transition: all 0.5s; z-index:2;}
+.m_btn {display: none;}
+/*container*/
+/*왼쪽 사이드 메뉴*/
+.side_menu {position:fixed; top: 50%; left:0; transform: translateY(-50%);
+            width:130px; z-index:3;}
+.side_menu li a {font-size: 16px; text-align: right; display:block; line-height:50px;
+                 border-top:1px solid #fff; color:#fff; transition: all 0.5s;}
+.side_menu li:hover a {color:rgb(163, 163, 163);}
+.side_menu li:nth-child(1).on a {color:#fff;}
+.side_menu li:nth-child(2).on a {color:#ff5fb9;}
+.side_menu li:nth-child(3).on a {color:#aecde9;}
+.side_menu li:nth-child(4).on a {color:#12ff8a;}
+.side_menu li:nth-child(5).on a {color:#ebece6;}
+.side_menu li:nth-child(6).on a {color:#026384;}
+.side_menu li:nth-child(7).on a {color:#03a10e;}
+
+/*백그라운드 위에 잠시 뒤 깔리는 검은 배경*/
+.black_bg {height:100vh; width: 100%; background-color: #000;}
+
+/*cont1*/
+.wp01 {position: relative;}
+
+/*cont2*/
+.wp02 {position: relative;}
+.wp02 .cont_wrap {position: absolute; top:36%; left:13%; display: flex;
+        justify-content: space-between; width:83%; text-align: center;
+        align-items: center; height:60vh;}
+
+/*왼쪽 하단 사이즈*/
+.wp02 .cont_wrap .size {display: flex; justify-content: center; align-items: center;
+        height:100%; border-radius: 20px; background-color: #520235; width: 37%;}
+.wp02 .cont_wrap .size .ip13 {margin-right: 30px; display: flex; flex-direction: column;
+        align-items: center; width:35%;} 
+.wp02 .cont_wrap .size .ip13 .phone_box {width:100%;}
+.wp02 .cont_wrap .size > div img {margin-bottom:20px; width: 100%;}
+.wp02 .cont_wrap .size > div h4 {color:#fff; margin-bottom:20px; font-weight: 700; text-align: center;
+        font-size:40px;}
+.wp02 .cont_wrap .size .ip13_mini {width:35%;}
+.wp02 .cont_wrap .size .ip13_mini .phone_box {width:90%;}
+.wp02 .cont_wrap .size .ip13_mini h4 {transform: translateY(30px);}   
+.wp02 .cont_wrap .size > div p {font-size: 20px; font-weight: 400; color:#ddd; text-align: center;}     
+
+/*오른쪽 상단 생활방수*/
+.wp02 .cont_wrap .right {display: flex; flex-direction: column; width: 60%; height: 100%;
+        justify-content: space-between;}
+.wp02 .cont_wrap .right .waterproof {width: 100%; background-color:#520235; border-radius:20px;
+        height:30%; display: flex; flex-direction: column;
+        align-items: center; justify-content: center;}
+.wp02 .cont_wrap .right .waterproof h3 {color:#fff; font-size:40px; margin-bottom:20px;
+        font-weight: 400;} 
+.wp02 .cont_wrap .right .waterproof p {color:#fff; font-size: 20px;}
+
+/*오른쪽 하단 엣지*/
+.wp02 .cont_wrap .right .edge {width: 100%; border-radius: 20px; background-color:#520235;
+        height:60%; position: relative;}
+.wp02 .cont_wrap .right .edge h3 {text-align: center; margin-top:7%; color:#fff; font-size:40px;
+        font-weight: 400;} 
+.wp02 .cont_wrap .right .edge_img {width: 90%; position: absolute; right:0; bottom:40px;}
+.wp02 .cont_wrap .right .edge_img img {width:100%;}
+
+/*cont3*/
+.wp03 {position: relative;}
+.wp03 .cont_wrap {display: flex; justify-content: space-between; align-items: center;
+        width: 80%; height: 62vh; position: absolute; top: 30%; left: 13%;}
+.wp03 .cont_wrap .cl {width: 25%; height: 100%;}
+.wp03 .cont_wrap .cl h3 {font-size: 40px; line-height: 40px;}
+.wp03 .cont_wrap .cl:nth-child(1) h3 {color:#aecde9;}
+.wp03 .cont_wrap .cl:nth-child(2) h3 {color:#fcedd9;}
+.wp03 .cont_wrap .cl:nth-child(3) h3 {color:#8b8883;}
+.wp03 .cont_wrap .cl:nth-child(4) h3 {color:#f7f7f0;}
+.wp03 .cont_wrap .cl h3 span {font-size: 20px; font-weight: 100; display: block;}
+.wp03 .cont_wrap .cl .imgbox {width: 100%;}
+.wp03 .cont_wrap .cl .imgbox img {width: 135%; transform: translate(-72px,-70px);}
+
+/*cont4*/
+.wp04 {position: relative; height: 100vh; width: 100%;}
+.wp04 .cont_wrap {position: absolute; top:25%; left: 50%; transform: translateX(-50%);
+        display: flex; justify-content: space-between; align-items:end;
+        width:100%; height:66vh; color:#fff;}
+.wp04 .cont_wrap .left {width:13%; margin-left:13%;}    
+.wp04 .cont_wrap .left h3 {font-size: 30px; line-height: 42px;
+        margin-bottom: 20px; font-weight: 700; width: 130%;}
+.wp04 .cont_wrap .left .imgbox {width: 100%;}
+.wp04 .cont_wrap .right {width:50%;}
+.wp04 .cont_wrap .right h3 {font-size:60px; color:#fff; margin-bottom:20px;
+        text-align:center;}
+.wp04 .cont_wrap .right .imgbox {width: 100%;}
+.wp04 .cont_wrap > div .imgbox img {width: 100%;}
+
+/*cont5*/
+.wp05 {position: relative;}
+.wp05 .cont_wrap {display: flex; position: absolute; top:30%; left:13%;
+        flex-direction: column;}
+.wp05 .cont_wrap .gray {font-size:46px; line-height:60px; color:#fff;}
+.wp05 .cont_wrap .gray .bk {color:#8f8f8f;}      
+.wp05 .imgbox {position: absolute; bottom:-12%; right:-30%; overflow: hidden; height: 49vh;}  
+.wp05 .imgbox img {width: 100%;}
+
+/*cont6*/
+.wp06 {position: relative;}
+.wp06 .cont_wrap {display: flex; position: absolute; top:28%; left:13%;
+        width: 80%; height: 68vh;}
+.wp06 .cont_wrap .left {width: 30%; display: flex; flex-direction: column; justify-content: center;
+        align-items: center; height: 70vh; color:#fff; text-align: center;}
+.wp06 .cont_wrap .left .imgbox {width: 250px; height: 250px; overflow:hidden; margin-bottom:20px;}
+.wp06 .cont_wrap .left .imgbox img {width: 100%; height: 100%;}
+.wp06 .cont_wrap .left h3 {font-size: 30px; margin-bottom:10px; line-height: 42px;}
+.wp06 .cont_wrap .left p {font-size: 24px; line-height: 32px; color:#c3c3c3;}
+.wp06 .cont_wrap .right {width: 70%; display: flex; flex-wrap: wrap;}
+.wp06 .cont_wrap .right .tetris {height:33.333333%; display:flex; justify-content: center;
+        border:1px solid #fff; flex-direction: column; padding:40px; color:#fff;}
+.wp06 .cont_wrap .right .tetris:nth-child(2n) {border-right: none;} 
+.wp06 .cont_wrap .right .tetris:nth-child(2n-1) {border-left: none;} 
+.wp06 .cont_wrap .right .nar {width:40%;}
+.wp06 .cont_wrap .right .wide {width:60%;}
+.wp06 .cont_wrap .right .tetris h3 {font-size: 30px; line-height: 40px; margin-bottom:15px;
+        font-weight: 400;}
+.wp06 .cont_wrap .right .tetris p {font-size:16px; line-height:28px; color:#c3c3c3;}
+.wp06 .text_box {position: absolute; top:15%; left:13%;}
+
+/*cont7*/
+.wp07 {position: relative;}
+.wp07 .cont_wrap {position: absolute; top:28%; left:13%; width: 80%; height: 72vh;
+        display: flex; flex-direction: column;}
+.wp07 .cont_wrap .battery_box {display: flex; align-items: end; width: 100%;
+        color:#fff; position: absolute; top:0; left:0;}
+.wp07 .cont_wrap .battery_box > div {width:30%;}     
+.wp07 .cont_wrap .battery_box .left .sub {font-size: 24px; color:rgb(187, 187, 187); margin-bottom:20px;}
+.wp07 .cont_wrap .battery_box .left .main {font-size:60px; line-height:76px; color:#fff}
+.wp07 .cont_wrap .battery_box .left .main .green {color:#03a10e;}
+.wp07 .cont_wrap .battery_box .right .top {font-size: 20px; color:#eee; margin-bottom:10px;}
+.wp07 .cont_wrap .battery_box .right .mid {font-size: 40px; margin-bottom:10px; color:#fff;
+        font-weight: 400;}
+.wp07 .cont_wrap .battery_box .right .bot {font-size:26px; color:rgb(131, 131, 131);}
+.wp07 .cont_wrap .battery_box .right > div {margin-bottom:20px;}
+.wp07 .cont_wrap .bot_bg {width: 100%; position:absolute; bottom: 0; height: 35vh;}
+.wp07 .cont_wrap .bot_bg img {width: 100%;}
+
+/*오른쪽 동그라미 버튼들 pager*/
+.pager {position: fixed; top:50%; transform: translateY(-50%); right:30px; z-index: 3;}
+.pager li {margin:20px 0;}
+.pager li.on a {background-color:unset; border:3px solid #fff;}
+.pager li a {display: block; width: 20px; height: 20px; border-radius: 50%; background-color: #fff;}
+
+/*wallpaper = 100vh 짜리 페이지들*/
+.wallpaper {background-repeat: no-repeat; background-size: cover;
+            height: 100vh; background-attachment: fixed; width: 100%; overflow: hidden;}
+.wp01 {background-image: url(../img/iphone_bg01.png);}
+.wp02 {background-image: url(../img/iphone_bg02.png);}
+.wp03 {background-image: url(../img/iphone_bg03.png);}
+.wp04 {background-image: url(../img/iphone_bg04.png);}
+.wp05 {background-image: url(../img/iphone_bg01.png);}
+.wp06 {background-image: url(../img/iphone_bg02.png);}
+
+/*매 페이지 메인 타이틀 공통 스타일*/    
+.wallpaper .text_box {position: absolute; top:15%; left:13%;}         
+.wallpaper .text_box .title {font-size:50px; margin-bottom:20px; color:#fff; font-weight:700;}
+.wallpaper .text_box .sub_title {font-size: 20px; color:#fff;}
+
+@media screen and (max-width:1200px)
+{
+        .wallpaper {background-position: inherit;} 
+        .gnb_bg {top:90px}   
+        .wallpaper .text_box {top:13%; left:13%;}  
+        .side_menu {line-height: 24px; font-size: 20px; width:115px;}  
+        .side_menu li a {font-size: 14px; line-height: 40px;}
+        .wp02 .cont_wrap {width:75%; left:18%;}
+        .wp02 .cont_wrap .size > div h4 {font-size: 34px;}
+        .wp02 .cont_wrap .size > div p {font-size: 16px;}
+        .wp02 .cont_wrap .right .edge h3 {margin-top:10%; font-size: 34px;}
+        .wp03 .cont_wrap {width: 75%; left:18%; top:40%;}
+        .wp03 .cont_wrap .cl h3 {font-size: 20px;}
+        .wp03 .cont_wrap .cl h3 span {font-size: 16px;}
+        .wp03 .cont_wrap .cl .imgbox img {width: 125%; transform: translate(-46px,-20px);}
+        .wp04 .cont_wrap {top: 43%; height: 54vh;}
+        .wp04 .cont_wrap .left {width: 14%; margin-left:18%;}
+        .wp04 .cont_wrap .left h3 {width: 150%;}
+        .wp04 .cont_wrap .right {width:60%;}
+        .wp05 .cont_wrap {top:34%; left:13%;}
+        .wp05 .cont_wrap .gray {font-size: 30px; line-height: 42px;}
+        .wp05 .imgbox {bottom:-15%;}
+        .wp06 .cont_wrap {top:35%; left:18%; height: 62vh;}
+        .wp06 .cont_wrap .left {height:100%;}
+        .wp06 .cont_wrap .left .imgbox {width: 200px; height: 200px; margin-bottom:20px;}
+        .wp06 .cont_wrap .left h3 {font-size: 28px; margin-bottom:10px; line-height: 36px;}
+        .wp06 .cont_wrap .left p {font-size: 20px; line-height: 28px;}
+        .wp06 .cont_wrap .right .tetris {padding: 30px;}
+        .wp06 .cont_wrap .right .tetris h3 {font-size: 26px; line-height: 36px; margin-bottom: unset;}
+        .wp06 .cont_wrap .right .tetris p {font-size: 14px; line-height: 22px;}
+        .wp06 .cont_wrap .right .tetris p br {display: none;}
+        .wp06 .cont_wrap .right .wide {width: 42%;}
+        .wp06 .cont_wrap .right .nar {width: 52%;}
+        .wp07 .cont_wrap {top:35%; left:18%; height: 70vh;}
+        .wp07 .cont_wrap .battery_box .left .sub {font-size: 24px; margin-bottom: 5px;}
+        .wp07 .cont_wrap .battery_box .left .main {font-size: 50px; line-height: 62px;}
+        .wp07 .cont_wrap .battery_box > div {width: 44%;}
+        .wp07 .cont_wrap .battery_box .right > div {margin-bottom: 20px;}
+        .wp07 .cont_wrap .battery_box .right .top {font-size: 18px; margin-bottom: 4px;}
+        .wp07 .cont_wrap .battery_box .right .mid {font-size: 34px; margin-bottom: 6px;}
+        .wp07 .cont_wrap .battery_box .right .bot {font-size: 22px;}
+        .wp07 .cont_wrap .bot_bg {height:28vh;}
+        .wp07 .cont_wrap .bot_bg img {width: 90%;}
+
+}
+
+@media screen and (max-width:1024px)
+{
+        #header .gnb {width: 60%;}
+        .wallpaper {background-position: bottom; background-size:86%;} 
+        .side_menu li:nth-child(2) a {line-height:26px;}
+        .wp02 .cont_wrap .right .waterproof {margin-bottom:unset; height:30%;}
+        .wp03 .cont_wrap .cl h3 {line-height: 24px;}
+        .wp03 .cont_wrap .cl h3 span {display: block; margin-left:0;}
+        .wp04 .cont_wrap .left h3 {font-size: 26px; line-height: 36px;} 
+        .wp04 .cont_wrap .right {width: 56%;}
+        .wp05 .cont_wrap {top:36%;}
+        .wp05 .cont_wrap .gray {font-size: 26px; line-height: 38px;}
+        .wp05 .imgbox {height: 46vh;}
+        .wp06 .cont_wrap .left {width: 26%;}
+        .wp06 .cont_wrap .left .imgbox {width: 180px; height: 180px; margin-bottom: 20px;}
+        .wp06 .cont_wrap .left h3 {font-size: 24px; margin-bottom:10px; line-height: 32px;}
+        .wp06 .cont_wrap .left p {font-size: 16px; line-height: 24px;}
+        .wp06 .cont_wrap .right .tetris {padding: 15px;}
+        .wp06 .cont_wrap .right .tetris h3 {font-size: 20px; line-height: 26px; margin-bottom:3px;}
+        .wp06 .cont_wrap .right .wide {width: 44%;} 
+        .wp07 .cont_wrap .battery_box .left .main {font-size: 40px; line-height: 50px;}
+        .wp07 .cont_wrap .battery_box .right .mid {font-size: 30px;}
+ 
+}
+
+@media screen and (max-width:768px)
+{
+        #header {background-color: #000;}
+        #header .gnb {display: none;}    
+        #header .logo {margin-left: 20px;}
+        #header .m_btn {display: block; margin-right: 20px;}     
+        #header .m_btn i {color:#fff; font-size: 26px;}
+        .side_menu {display: none;}
+        .pager {display: none;}
+        .wallpaper {background-position: right bottom;
+                background-size: 175%; overflow: unset;}
+        .wallpaper .text_box {top:10%; left:10%;}
+        .wallpaper .text_box .title {line-height: 70px;}
+        .wallpaper .text_box .sub_title {line-height: 30px;}
+        /*여기서부턴 높이값이 100vh가 안되는 것들은 auto처리*/
+        * {height: auto;}
+        .black_bg {height: 100%;}
+        .wp01 {height:100vh;}
+        /*wp02*/
+        .wp02 {height:auto; background-image: unset;
+               padding: 100px 0;}
+        .wp02 .black_bg {height:auto; display: flex; flex-direction: column;
+                justify-content: center; align-items: center;}
+        .wp02 .text_box {width: 80%; margin-bottom:50px; position: unset;}
+        .wp02 .cont_wrap {height: auto; width: 88%; flex-direction: column; transform: unset;
+                position: unset;}
+        .wp02 .black_bg .text_box {position:unset;}
+        .wp02 .cont_wrap {width: 88%; transform:inherit; flex-direction: column;}
+        .wp02 .cont_wrap .size {padding: 30px 0; width: 100%; margin-bottom:50px;}
+        .wp02 .cont_wrap .right {width: 100%; height: auto;}
+        .wp02 .cont_wrap .right .waterproof {margin-bottom: 50px; height: auto;
+                padding: 30px 0;}
+        .wp02 .cont_wrap .right .edge {width: 100%; padding: 84px 0; height: auto;
+                overflow: hidden;}
+        .wp02 .cont_wrap .right .edge h3 {margin-top:-9%;}
+        .wp02 .cont_wrap .right .edge_img {bottom: -14px;}  
+        /*wp03*/      
+        .wp03 {height:auto;}
+        .wp03 .black_bg {height:auto; display: flex; flex-direction: column;
+                justify-content: center; align-items: center;}
+        .wp03 .text_box {width: 80%; margin-bottom:50px; position: unset;}
+        .wp03 .cont_wrap {height: auto; width: 88%; flex-direction: column; transform: unset;
+                position: unset;}
+        .wp03 .cont_wrap .cl {width: 100%;}
+        .wp03 .cont_wrap .cl .imgbox {display: flex; justify-content: center; align-items: center;
+                width: 100%;}
+        .wp03 .cont_wrap .cl .imgbox img {transform:translateY(-80px); width: 100%;}
+        .wp03 .cont_wrap .cl h3 {line-height:46px; text-align: center; font-size: 40px;}
+        .wp03 .cont_wrap .cl h3 span {font-size: 26px;}
+        /*wp04*/
+        .wp04 {height:auto; margin-bottom:50px;}
+        .wp04 .black_bg {height:auto; display: flex; flex-direction: column;
+                justify-content: center; align-items: center;}
+        .wp04 .text_box {width: 80%; margin-bottom:50px; position: unset;}
+        .wp04 .cont_wrap {height: auto; flex-direction: column; transform: unset;
+                position: unset; display: flex; justify-content: center; align-items: center;
+                width: 100%; flex-direction: column;}
+        .wp04 .black_bg .text_box {position:unset;}
+        .wp04 .cont_wrap .left {width: 50%; margin-left: 0; margin-bottom: 50px;}
+        .wp04 .cont_wrap .left h3 {width: unset; text-align: center;}
+        .wp04 .cont_wrap .right {width: 100%;}
+        /*wp05*/
+        .wp05 {height:auto;}
+        .wp05 .black_bg {height:auto; display: flex; flex-direction: column;
+                justify-content: center; align-items: center;}
+        .wp05 .text_box {width: 80%; margin-bottom:50px; position: unset;}
+        .wp05 .cont_wrap {height: auto; width:100%; flex-direction: column; transform: unset;
+                position: unset; display: flex; justify-content: center; align-items: center;
+                margin-bottom: 30px; padding: 40px;}
+        .wp05 .cont_wrap .gray {font-size: 24px; line-height: 36px; margin-bottom:20px; text-align: center;}
+        .wp05 .black_bg .text_box {position:unset;}
+        .wp05 .imgbox {height: 18vh; position: unset; height: 220px; margin-left: 18px;}
+        .wp06 {height:auto; margin-bottom: 50px;}
+        .wp06 .black_bg {height:auto; display: flex; flex-direction: column;
+                justify-content: center; align-items: center;}
+        .wp06 .text_box {width: 80%; margin-bottom:50px; position: unset;}
+        .wp06 .cont_wrap {height: auto; width:88%; flex-direction: column; transform: unset;
+                position: unset; display: flex; justify-content: center; align-items: center;
+                margin-bottom: 30px;}
+        .wp06 .black_bg .text_box {position:unset;}
+        .wp06 .cont_wrap .left {width: 100%; margin-bottom:50px;}
+        .wp06 .cont_wrap .right {width: 100%;}
+        .wp06 .cont_wrap .right .tetris {padding: unset; height: 200px;}
+        .wp06 .cont_wrap .right .tetris:nth-child(2n) {padding-left:30px;}
+        .wp06 .cont_wrap .right .wide {width: 50%;}
+        .wp06 .cont_wrap .right .nar {width: 50%;}
+        .wp07 {height:auto;}
+        .wp07 .black_bg {height:auto; display: flex; flex-direction: column;
+                justify-content: center; align-items: center;}
+        .wp07 .text_box {width: 80%; margin-bottom:50px; position: unset;}
+        .wp07 .cont_wrap {height: auto; width:100%; flex-direction: column; transform: unset;
+                position: unset; display: flex; justify-content: center; align-items: center;}
+        .wp07 .black_bg .text_box {position:unset;}
+        .wp07 .cont_wrap .battery_box {position: unset; flex-direction: column;}
+        .wp07 .cont_wrap .battery_box > div {width: 100%; padding: 0 60px 30px;}
+        .wp07 .cont_wrap .bot_bg {position: unset; height:300px; display: flex; justify-content: center;}
+        .wp07 .cont_wrap .bot_bg img {width: 130%; height: 100%;}
+        .section_wrap {transition:unset;}
+
+        /*모바일 메뉴 작업*/
+        .m_menu {position: fixed; top: 0; right:-300px;
+                width: 300px; background-color: #fff; color: rgb(27, 27, 27);
+                z-index: 9999; height: 100vh; padding:30px;}
+        .m_menu .m_close_btn {margin-left: 80%; display: block; margin-bottom: 40px;}   
+        .m_menu .m_close_btn i {color: rgb(27, 27, 27); font-size: 40px;}
+        .m_menu .m_gnb li a {display: flex; line-height: 50px; color: rgb(27, 27, 27); font-size:16px;}
+        .m_menu .m_gnb li a i {color: rgb(27, 27, 27); font-size: 30px; margin-left: 20px; line-height: 50px;
+                display: none;}
+        .m_menu .m_gnb li.on a i {display: block;}        
+}
+
+@media screen and (max-width:480px)
+{
+        
+        .wp03 .cont_wrap .cl .imgbox img {transform: translateY(-60px);}
+        .wp04 .cont_wrap .left {width: 70%;}
+        .wp04 .cont_wrap .right h3 {font-size: 40px;}
+        .wp05 .black_bg .text_box {margin-top:50px;}
+        .wp05 .cont_wrap {padding: 20px;}
+        .wp05 .cont_wrap .gray {font-size: 18px; line-height: 26px;
+                text-align: left;}
+        .wp06 .cont_wrap .right .tetris p br {display: none;}  
+        .wp06 .cont_wrap .right .tetris:nth-child(2n) {padding-left:15px;}  
+        .wp07 .cont_wrap .battery_box > div {padding: 0 30px 30px;}   
+        .wp07 .cont_wrap .battery_box .right .top {margin-bottom:10px;}
+        .wp07 .cont_wrap .battery_box .right .mid {margin-bottom:15px;}
+        .wp07 .cont_wrap .battery_box .right .bot {line-height: 28px;}
+}
